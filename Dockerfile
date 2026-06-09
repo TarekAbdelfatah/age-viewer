@@ -8,6 +8,8 @@ COPY . .
 
 RUN npm run setup
 
+RUN cd backend && npm install @babel/runtime
+
 EXPOSE 3000
 
 CMD ["npm", "run", "start"]
