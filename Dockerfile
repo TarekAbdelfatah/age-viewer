@@ -16,6 +16,8 @@ RUN npm install @babel/runtime
 RUN cd backend && npm install @babel/runtime
 RUN cd frontend && npm install @babel/runtime
 
+RUN cd frontend && npm run build
+
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+CMD ["sh", "-c", "cd backend && npm run start"]
